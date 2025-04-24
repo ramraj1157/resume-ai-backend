@@ -17,7 +17,7 @@ const routes = [
   "http://localhost:5175/",
 ];
 const corsOptions = {
-  origin: "https://resume-ai-frontend-olive.vercel.app",
+  origin: "https://resume-generator-silk.vercel.app",
   credentials: true,
 };
 
