@@ -107,12 +107,11 @@ const loginUser = async (req, res) => {
     );
 
     const cookieOptions = {
-      httpOnly: true,
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Set cookie to expire in 1 day
-      sameSite: process.env.NODE_ENV == "Dev" ? "lax" : "none", // Set SameSite attribute for better security
-      secure: process.env.NODE_ENV == "Dev" ? false : true, // Set Secure attribute for better security
+      httpOnly: true,
+      secure: true, // required for HTTPS
+      sameSite: "None", // use "Strict" or "Lax" for same-site requests only
     };
-    
 
     console.log("Login Successful");
     return res
