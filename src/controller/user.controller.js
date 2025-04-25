@@ -143,7 +143,11 @@ const logoutUser = (req, res) => {
   console.log("Logged out");
   if (req.user) {
     return res
-      .clearCookie("token")
+      .clearCookie("token", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+      })
       .status(200)
       .json(new ApiResponse(200, null, "User logged out successfully."));
   } else {
