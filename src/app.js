@@ -13,8 +13,6 @@ app.use(cookieParser());
 
 const routes = [
   "http://localhost:5173",
-  "http://localhost:5174",
-  "http://localhost:5175",
   "https://resume-generator-silk.vercel.app"
 ];
 const corsOptions = {
