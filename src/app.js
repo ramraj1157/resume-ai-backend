@@ -16,7 +16,7 @@ const routes = [
   "https://resume-generator-silk.vercel.app"
 ];
 const corsOptions = {
-  origin: routes,
+  origin: "*",
   credentials: true,
 };
 
